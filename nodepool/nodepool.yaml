@@ -31,15 +31,19 @@ labels:
       - name: local_01
 
 diskimages:
-    - name: dpc
+    - name: ubuntu-precise
       elements:
-        - ubuntu
-        - vm
         - openstack-repos
         - puppet
         - nodepool-base
         - cache-devstack
-      release: trusty
+	- cache-bindep
+	- infra-package-needs
+	- initialize-urandom
+	- prepare-node
+	- stackviz
+	- zuul-worker
+      release: precise
       env-vars:
         TMPDIR: /opt/dib_tmp
         DIB_IMAGE_CACHE: /opt/dib_cache
@@ -47,9 +51,9 @@ diskimages:
 providers:
   - name: local_01
 #TODO: Update the provider username, password, and authurl
-    username: '<%= provider_username %>'
-    password: '<%= provider_password %>'
-    auth-url: 'http://<openstack cloud>:5000/v2.0'
+    username: 'admin'
+    password: '123456'
+    auth-url: 'http://ddnlab.imwork.net:5000/v2.0'
     project-name: 'admin'
     max-servers: 2
     images:
