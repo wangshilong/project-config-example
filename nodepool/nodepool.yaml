@@ -37,12 +37,12 @@ diskimages:
         - puppet
         - nodepool-base
         - cache-devstack
-	- cache-bindep
-	- infra-package-needs
-	- initialize-urandom
-	- prepare-node
-	- stackviz
-	- zuul-worker
+        - cache-bindep
+        - infra-package-needs
+        - initialize-urandom
+        - prepare-node
+        - stackviz
+        - zuul-worker
       release: precise
       env-vars:
         TMPDIR: /opt/dib_tmp
