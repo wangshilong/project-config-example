@@ -31,19 +31,15 @@ labels:
       - name: local_01
 
 diskimages:
-    - name: ubuntu-precise
+    - name: dpc
       elements:
-        - openstack-repos
         - puppet
         - nodepool-base
         - cache-devstack
-        - cache-bindep
-        - infra-package-needs
-        - initialize-urandom
-        - prepare-node
-        - stackviz
-        - zuul-worker
-      release: precise
+        - ubuntu
+        - vm
+        - openstack-repos
+      release: trusty
       env-vars:
         TMPDIR: /opt/dib_tmp
         DIB_IMAGE_CACHE: /opt/dib_cache
