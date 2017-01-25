@@ -24,14 +24,14 @@ gearman-servers:
   - host: 127.0.0.1
 
 labels:
-  - name: d-p-c
-    image: dpc
+  - name: d-p-c-1
+    image: dpc1
     min-ready: 1
     providers:
       - name: local_01
 
 diskimages:
-    - name: dpc
+    - name: dpc1
       elements:
         - puppet
         - nodepool-base
@@ -49,13 +49,13 @@ providers:
 #TODO: Update the provider username, password, and authurl
     username: 'admin'
     password: '123456'
-    auth-url: 'http://ddnlab.imwork.net:5000/v2.0'
+    auth-url: 'http://10.128.10.73/identity/v2.0/'
     project-name: 'admin'
     max-servers: 2
     images:
-      - name: dpc
+      - name: dpc1
         min-ram: 8192
-        diskimage: dpc
+        diskimage: dpc1
         username: jenkins
         private-key: '/home/nodepool/.ssh/id_rsa'
 
