@@ -24,14 +24,14 @@ gearman-servers:
   - host: 127.0.0.1
 
 labels:
-  - name: d-p-c-1
-    image: dpc1
+  - name: d-p-c
+    image: dpc
     min-ready: 1
     providers:
       - name: local_01
 
 diskimages:
-    - name: dpc1
+    - name: dpc
       elements:
         - puppet
         - nodepool-base
@@ -53,9 +53,9 @@ providers:
     project-name: 'admin'
     max-servers: 2
     images:
-      - name: dpc1
-        min-ram: 8192
-        diskimage: dpc1
+      - name: dpc
+        min-ram: 2048
+        diskimage: dpc
         username: jenkins
         private-key: '/home/nodepool/.ssh/id_rsa'
 
