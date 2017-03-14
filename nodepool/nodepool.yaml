@@ -39,7 +39,7 @@ diskimages:
         - ubuntu
         - vm
         - openstack-repos
-      release: trusty
+      release: xenial
       env-vars:
         TMPDIR: /opt/dib_tmp
         DIB_IMAGE_CACHE: /opt/dib_cache
@@ -51,13 +51,13 @@ providers:
     password: 'password'
     auth-url: 'http://10.128.10.70/identity/v2.0/'
     project-name: 'admin'
-    max-servers: 2
+    max-servers: 4
     images:
       - name: dpc
-        min-ram: 2048
+        min-ram: 8192
         diskimage: dpc
         username: jenkins
         private-key: '/home/nodepool/.ssh/id_rsa'
 
 targets:
-  - name: jenkins1
+  - name: jenkins
