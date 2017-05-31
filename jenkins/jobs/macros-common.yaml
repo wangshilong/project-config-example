@@ -57,7 +57,7 @@
           echo "Triggered by: https://review.openstack.org/$ZUUL_CHANGE patchset $ZUUL_PATCHSET"
 
           # TODO: Update this link to point to your log server
-          echo "Detailed logs: http://10.128.10.75/$LOG_PATH/"
+          echo "Detailed logs: https://ddn-lustre-ci.datadirectnet.jp/"
 
 - publisher:
     name: console-log
