@@ -62,15 +62,15 @@ projects:
     check:
       # Remove this after successfully verifying communication with upstream
       # and seeing a posted successful review.
-      - noop-check-communication
-      - dsvm-tempest-my-cinder-driver
+      #- noop-check-communication
+      #- dsvm-tempest-my-cinder-driver
   - name: openstack/cinder
     check:
       # Remove this after successfully verifying communication with upstream
       # and seeing a posted successful review.
-      - dsvm-tempest-my-cinder-driver
+      #- dsvm-tempest-my-cinder-driver
   - name: openstack/nova
     check:
       # Remove this after successfully verifying communication with upstream
       # and seeing a posted successful review.
-      - dsvm-tempest-my-cinder-driver
+      #- dsvm-tempest-my-cinder-driver
